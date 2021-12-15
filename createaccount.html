@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load static%}
+<title>E-bank</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Slide Login Form template Responsive, Login form web template, Flat Pricing tables, Flat Drop downs Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+	 <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link href="{% static 'vendor/mdi-font/css/material-design-iconic-font.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor/font-awesome-4.7/css/font-awesome.min.css' %}" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="{% static 'vendor/select2/select2.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor/datepicker/daterangepicker.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" media="all">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{% static '//fonts.googleapis.com/css?family=Hind:300,400,500,600,700' %}" rel="stylesheet">
+
+</head>
+<body>
+    {% if messages %}
+		<ul style="background: white;">
+			{% for message in messages %}
+			<center style="color: red;">{{ message }}</center>
+			{% endfor %}
+		</ul>
+	{% endif %}
+<div class="w3layouts-main"> 
+	<div class="bg-layer">
+		<h1>Registration With E-banking</h1>
+		<div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <form method="POST" action="check_acc_data" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-1" type="text" placeholder="Your Name" name="fname" required>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-1" type="text" placeholder="Father/Hasband Name" name="mname" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-1" type="text" placeholder="Your Surname" name="lname" required>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="gender">
+                                            <option disabled="disabled" selected="selected">Gender</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-1 js-datepicker" type="text" placeholder="BirthDate" name="birthday">
+                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="actype">
+                                            <option disabled="disabled" selected="selected">Account Type</option>
+                                            <option>Saving</option>
+                                            <option>Current</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="Your Address" name="address" required>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-1" type="number" placeholder="Your Mobile Number" name="mnumber" required min="1">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-1" type="number" placeholder="Your Alternate Mobile Number" name="altnumber" required min="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-1" type="number" placeholder="Total Family Member" name="fmember" required min="1">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-1" type="text" placeholder="Your Occupation" name="occu" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-1" type="number" placeholder="Your Monthly Income" name="income" required min="0">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-1" type="email" placeholder="Your Email Id" name="eid" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-1" type="number" placeholder="Your Adhar Number" name="adharno" required min="1">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-1" type="text" placeholder="Your PAN Number" name="panno">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-t-20">
+                           <center> <button class="btn btn--radius btn--green" type="submit">Submit</button></center>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+		
+		<!-- copyright -->
+		<div class="copyright">
+			<p>© 2020 E-Banking . All rights reserved | Developed By <a style="color: blue;" href="http://pywebx.pythonanywhere.com/">PyWebX</a></p>
+		</div>
+		<!-- //copyright --> 
+	</div>
+</div>	
+<!-- //main -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+    <script src="{% static 'vendor/datepicker/moment.min.js' %}"></script>
+    <script src="{% static 'vendor/datepicker/daterangepicker.js' %}"></script>
+
+    <!-- Main JS-->
+    <script src="{% static 'js/global.js' %}"></script>
+
+</body>
+</html>

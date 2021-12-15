@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load static%}
+<title>E-bank</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Slide Login Form template Responsive, Login form web template, Flat Pricing tables, Flat Drop downs Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+	 <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link href="{% static 'vendor/mdi-font/css/material-design-iconic-font.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor/font-awesome-4.7/css/font-awesome.min.css' %}" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="{% static 'vendor/select2/select2.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor/datepicker/daterangepicker.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" media="all">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{% static '//fonts.googleapis.com/css?family=Hind:300,400,500,600,700' %}" rel="stylesheet">
+
+</head>
+<body>
+<div class="w3layouts-main"> 
+	<div class="bg-layer">
+		<h1>Registration With E-banking</h1>
+		<div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    {% for acct in ac_details %}
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>First Name:{{ acct.FirstName }}</text>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>Middle Name:{{ acct.MiddleName }}</text>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>Last Name:{{ acct.LastName }}</text>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>Gender:{{ acct.Gender }}</text>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>BirthDate:{{ acct.BirthDate }}</text>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>Account Type:{{ acct.AccType }}</text>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>Address:{{ acct.Address }}</text>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>Mobile Number:{{ acct.MobileNo }}</text>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>Alternate Number:{{ acct.AltNumber }}</text>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>Family Member:{{ acct.FamilyMem }}</text>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>Occupation:{{ acct.OccuP }}</text>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>Your Income:{{ acct.Income }}</text>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>Email Id:{{ acct.EmailID }}</text>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>Adhar Number:{{ acct.AdharNo }}</text>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>PAN Number:{{ acct.PANno }}</text>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>Account Number:{{ acct.NewAccountNo }}</text>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>Account Password:{{ acct.NewAccountPass }}</text>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <text>Account Balance:{{ acct.Account_bal }}</text>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <a href="/">
+                        <div class="bottom">
+                            <center><button class="btn" style="color:black;">Login</button></center>
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+		
+		<!-- copyright -->
+		<div class="copyright">
+			<p>© 2020 E-Banking . All rights reserved | Developed By <a style="color: blue;" href="http://pywebx.pythonanywhere.com/">PyWebX</a></p>
+		</div>
+		<!-- //copyright --> 
+	</div>
+</div>	
+<!-- //main -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+    <script src="{% static 'vendor/datepicker/moment.min.js' %}"></script>
+    <script src="{% static 'vendor/datepicker/daterangepicker.js' %}"></script>
+
+    <!-- Main JS-->
+    <script src="{% static 'js/global.js' %}"></script>
+
+</body>
+</html>
